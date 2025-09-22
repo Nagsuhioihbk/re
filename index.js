@@ -35,7 +35,7 @@ const AdminSchema = new mongoose.Schema({
   role: String, // admin or customer
 });
 
-const Admin = mongoose.model("admin", AdminSchema);
+const Admin =  mongoose.models.admin || mongoose.model("admin", AdminSchema);
 
 // ----- MULTER CONFIG -----
 const storage = multer.memoryStorage();
